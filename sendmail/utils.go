@@ -54,6 +54,6 @@ func (u *UtilsImpl) SendEmail(content string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Println(send)
+	fmt.Println(send.Id)
 	return nil
 }
