@@ -23,7 +23,7 @@ func NewUtils() *UtilsImpl {
 	if err := godotenv.Load(); err != nil {
 		log.Fatal("读取.env 文件发生错误")
 	}
-	apikey := os.Getenv("APIKEY")
+	apikey := os.Getenv("RESENDAPIKEY")
 	if apikey == "" {
 		log.Println("APIKEY为空")
 	}
