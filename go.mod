@@ -1,4 +1,4 @@
-module github.com/tattoo
+module github.com/tattoo1880/sendMailByRsend
 
 go 1.26.1
 
