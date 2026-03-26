@@ -3,7 +3,6 @@ package sendmail
 import (
 	"fmt"
 	"log"
-	"os"
 	"time"
 
 	"github.com/resend/resend-go/v3"
@@ -20,7 +19,6 @@ type UtilsImpl struct {
 // todo 构造函数
 func NewUtils(apikey string) *UtilsImpl {
 
-	apikey := os.Getenv(apikey)
 	if apikey == "" {
 		log.Println("APIKEY为空")
 	}
