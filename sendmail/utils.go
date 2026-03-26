@@ -2,7 +2,6 @@ package sendmail
 
 import (
 	"fmt"
-	"log"
 	"time"
 
 	"github.com/resend/resend-go/v3"
@@ -19,9 +18,6 @@ type UtilsImpl struct {
 // todo 构造函数
 func NewUtils(apikey string) *UtilsImpl {
 
-	if apikey == "" {
-		log.Println("APIKEY为空")
-	}
 	client := resend.NewClient(apikey)
 	return &UtilsImpl{
 		Client: client,
