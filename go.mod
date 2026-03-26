@@ -1,6 +1,6 @@
 module github.com/tattoo1880/sendMailByRsend
 
-go 1.26.1
+go 1.25.1
 
 require (
 	github.com/joho/godotenv v1.5.1 // indirect
