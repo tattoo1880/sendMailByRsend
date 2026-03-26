@@ -6,7 +6,6 @@ import (
 	"os"
 	"time"
 
-	"github.com/joho/godotenv"
 	"github.com/resend/resend-go/v3"
 )
 
@@ -19,11 +18,9 @@ type UtilsImpl struct {
 }
 
 // todo 构造函数
-func NewUtils() *UtilsImpl {
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("读取.env 文件发生错误")
-	}
-	apikey := os.Getenv("RESENDAPIKEY")
+func NewUtils(apikey string) *UtilsImpl {
+
+	apikey := os.Getenv(apikey)
 	if apikey == "" {
 		log.Println("APIKEY为空")
 	}
